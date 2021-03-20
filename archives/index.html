@@ -38,9 +38,6 @@
   
 
   
-    
- 	  <script src="/lib/clickLove.js"></script>
-  
   
 
 
@@ -742,7 +739,9 @@
 
 </div>
   </div>
-
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
   
   
 <script type="text/javascript" src="/plugins/activate-power-mode/activate-power-mode.js"></script>
@@ -795,7 +794,7 @@
       
     },
     mobile: {
-       show: false, 
+      
        scale: 0.6 
     },
     react: {
@@ -806,6 +805,16 @@
 </script>
 
   
+  
+  <script type="text/javascript" src="/lib/snow.js"></script>
+  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
+  <script>
+    snow.down();
+    $(window).resize(function() {
+      $("canvas").css("z-index","500").remove();
+      snow.down();
+    });
+  </script>
   
 </body>
 
